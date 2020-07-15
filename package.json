@@ -1,0 +1,21 @@
+{
+  "name": "ci-cd-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "travis": "echo hello"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShahNafis/ci-cd-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShahNafis/ci-cd-test/issues"
+  },
+  "homepage": "https://github.com/ShahNafis/ci-cd-test#readme"
+}
