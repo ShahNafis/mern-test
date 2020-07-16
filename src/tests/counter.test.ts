@@ -1,4 +1,4 @@
-import {clickDown,clickUp} from '../src/components/counter'
+import {clickDown,clickUp} from '../site/components/counter'
 
 test('Test clickDown(0)', () => {
     expect(clickDown(0)).toBe(-1);
