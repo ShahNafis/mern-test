@@ -4,6 +4,8 @@ import React from 'react';
 import { makeStyles, withStyles, createStyles, Theme, WithStyles  } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
+
+
 interface Props extends WithStyles<typeof styles> {
 }
 
@@ -12,9 +14,9 @@ class HomePage extends React.Component<Props> {
     const {classes} = this.props
     return (
       <React.Fragment>
-        <div className={classes.test}>
+        {/* <div className={classes.test}>
           <Button variant="contained">Default</Button>
-        </div>
+        </div> */}
       </React.Fragment>      
     )
   }
@@ -22,7 +24,7 @@ class HomePage extends React.Component<Props> {
 
 const styles:any = (theme:Theme) => ({
   test: {
-    backgroundColor:'dodgerblue'
+    //backgroundColor:'dodgerblue'
   }
 });
 
