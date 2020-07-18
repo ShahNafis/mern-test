@@ -1,9 +1,13 @@
 import React from 'react';
+import {ComponentDidX} from '../../components/ClassDemo'
 
 class ClassPage extends React.Component {
     render() {
         return (
-            <div>I am a class component</div>
+            <React.Fragment>
+                <div>I am a class component</div>
+                <ComponentDidX/>
+            </React.Fragment>
         )
     }
 }

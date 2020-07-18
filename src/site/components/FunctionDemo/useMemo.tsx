@@ -10,7 +10,7 @@ function UseMemoDemo() {
             <h1>
                 useMemo
             </h1>
-        
+            <i>ehhhh too complicated</i>
           
         </React.Fragment>
     )
