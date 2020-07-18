@@ -22,7 +22,7 @@ class HomePage extends React.Component<Props> {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
    
-    await timeout(5000)
+    //await timeout(5000)
 
     return { stars: json.stargazers_count }
   }
