@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react'
 //import UseStateDemo from '../../components/FunctionDemo'
-import {UseState,UseReducer,UseEffect,UseContext} from '../../components/FunctionDemo'
+import {UseState,UseReducer,UseEffect,UseContext,UseMemo} from '../../components/FunctionDemo'
 
 function FunctionPage() {
     return (
@@ -10,6 +10,7 @@ function FunctionPage() {
             <UseReducer/>
             <UseEffect/>
             <UseContext/>
+            <UseMemo/>
         </React.Fragment>
     )
 }

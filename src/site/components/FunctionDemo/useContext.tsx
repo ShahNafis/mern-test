@@ -25,7 +25,9 @@ function CardHolder() {
     const contextValues = useContext(ThemeContext);
     return(
         <React.Fragment>
-            {contextValues.theme.palette.type}
+            <div>
+                Current theme is {contextValues.theme.palette.type} mode
+            </div>
             <ThemeProvider theme={contextValues.theme}>
                 <Grid container >
                     <Grid container item xs={12} >
@@ -46,9 +48,7 @@ function UseContextDemo() {
     //Here we force it to darktheme default 
     const [themeToUse, setTheme] = useState(darkTheme);
     function toggleTheme() {
-        //console.log(themeToUse.palette.type)
         setTheme(themeToUse.palette.type === 'dark'? theme: darkTheme)
-        //console.log(themeToUse.palette.type === 'dark'? theme: darkTheme )
     }
     return (
  
@@ -59,7 +59,7 @@ function UseContextDemo() {
            
             <Button variant="contained" color="primary" onClick={()=>toggleTheme()}>Toggle Theme</Button>
 
-            <ThemeContext.Provider value={{theme:darkTheme,setTheme:setTheme}}>
+            <ThemeContext.Provider value={{theme:themeToUse,setTheme:setTheme}}>
                 <CardHolder />
             </ThemeContext.Provider>
         </React.Fragment>
