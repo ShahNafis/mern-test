@@ -24,6 +24,10 @@ const pages:pageArray = [
     {
         name:'Functional Component',
         path:'/function'
+    },
+    {
+        name:'About',
+        path:'/about'
     }
 ]
 
@@ -35,9 +39,9 @@ export default function Layout({children}:Props) {
                 <div>
                     <ul>
                         {
-                            pages.map(pageData => {
+                            pages.map((pageData,index) => {
                                 return (
-                                    <li>
+                                    <li key={index}>
                                         <a href={pageData.path}>{pageData.name}</a>
                                     </li> 
                                 )

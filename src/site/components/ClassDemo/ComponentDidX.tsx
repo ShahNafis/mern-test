@@ -6,6 +6,7 @@ class DemoComp extends React.Component {
     state = {
         counter:0
     }
+    
     componentDidMount() {
         document.title = `I have mounted`;
     }

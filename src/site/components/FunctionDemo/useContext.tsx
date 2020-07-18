@@ -60,7 +60,7 @@ function UseContextDemo() {
             <Button variant="contained" color="primary" onClick={()=>toggleTheme()}>Toggle Theme</Button>
 
             <ThemeContext.Provider value={{theme:themeToUse,setTheme:setTheme}}>
-                <CardHolder />
+                <CardHolder/>
             </ThemeContext.Provider>
         </React.Fragment>
     )

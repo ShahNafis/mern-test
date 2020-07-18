@@ -12,7 +12,8 @@ function reducer(state,action) {
         case 'toggle_loggedin':
             return {
                 ...state,
-                loggedIn:!state.loggedIn};
+                loggedIn:!state.loggedIn
+            };
         case 'toggle_pizza':
             return {
                 ...state,
@@ -44,24 +45,24 @@ function reducer(state,action) {
 const yesNo = (state) => state? 'yes':'no'
 
 function UseReducerDemo() {
-    const [myState, dispatch] = useReducer(reducer, initState);
+    const [myState, setMyState] = useReducer(reducer, initState);
     return( 
         <React.Fragment>
             <h1>
                 useReducer
             </h1>
             {JSON.stringify(myState)}<br/>
-            <Button variant="contained" color="primary" onClick={()=>dispatch({type:'toggle_loggedin'})}>
+            <Button variant="contained" color="primary" onClick={()=>setMyState({type:'toggle_loggedin'})}>
                 Logged in: {yesNo(myState.loggedIn)}
             </Button> <br/>
-            <Button variant="contained" color="secondary" onClick={()=>dispatch({type:'toggle_pizza'})}>
+            <Button variant="contained" color="secondary" onClick={()=>setMyState({type:'toggle_pizza'})}>
                 Likes Pizza: {yesNo(myState.likesPizza)}
             </Button> <br/>
-            <Button variant="contained" color="default" onClick={()=>dispatch({type:'toggle_php'})}>
+            <Button variant="contained" color="default" onClick={()=>setMyState({type:'toggle_php'})}>
                 Likes PHP: {yesNo(myState.likesPHP)}
             </Button> <br/><br/>
 
-            <Button onClick={()=>dispatch({type:'php_bad'})}>
+            <Button onClick={()=>setMyState({type:'php_bad'})}>
                 PHP bad
             </Button>
             <Button onClick={()=>dispatch({type:'toggle_all'})}>

@@ -3,17 +3,26 @@ import Button from '@material-ui/core/Button';
 
 
 function EffectComp() {
+    let [loaded,setLoaded] = useState(false)
+    let [counter,setCounter] = useState(0)
     useEffect(() => {
-        // Update the document title using the browser API
-        document.title = `I have loaded`;
-
-        return function cleanup() {
-            document.title = `I have unloaded!!!!!!!!!!`;
+        if(loaded) {
+            alert('hi')
         }
-    });
+
+        // Update the document title using the browser API
+        document.title = `I have loaded ${counter}`;
+        setLoaded(true)
+        // return function cleanup() {
+        //     document.title = `I have unloaded!!!!!!!!!!`;
+        //     alert('bye bye')
+        // }
+    },[counter]);
     return( 
         <React.Fragment>
             <h3>HELLO!!!</h3>
+            {counter}
+            <Button onClick={()=>setCounter(counter+1)}>INCREMENT</Button>
         </React.Fragment>
     )
 }
