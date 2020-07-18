@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react'
 //import UseStateDemo from '../../components/FunctionDemo'
-import {UseState,UseReducer} from '../../components/FunctionDemo'
+import {UseState,UseReducer,UseEffect,UseContext} from '../../components/FunctionDemo'
 
 function FunctionPage() {
     return (
@@ -8,7 +8,8 @@ function FunctionPage() {
             I am a functional component
             <UseState/>
             <UseReducer/>
-          
+            <UseEffect/>
+            <UseContext/>
         </React.Fragment>
     )
 }
