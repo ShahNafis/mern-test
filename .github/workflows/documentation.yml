@@ -44,7 +44,7 @@ jobs:
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
-          GIT_USER: git
+          GIT_USER: nafis.shah
         run: |
           cd docs
           git config --global user.email "nafis.shah@gihub.com"
