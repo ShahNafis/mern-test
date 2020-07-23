@@ -1,4 +1,4 @@
-## Thinkers Related
+## Hi
 
 - **Namecheap** - Cheap place to get a domain name. Plus I already have used it in the capacity that we will use it.
 - **Nginx** - Our servers should never have sudo access, yet if we want https our server has to be on port 443(https) and port 80(http) so that it can upgrade the connection to https. However to have any program run on any port less then 1024, it needs sudo access. Nginx acts as a reverse proxy that runs on 80 and 443 and redircets traffic to our server. It also acts a way to deliver static assets. 
