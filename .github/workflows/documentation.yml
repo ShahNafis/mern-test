@@ -17,14 +17,8 @@ jobs:
           node-version: '12.x'
       - name: Test Build
         run: |
-          cd docs
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
+          cd docs   
           npm ci
-          else
-          npm i
-          fi
           npm run build
   gh-release:
     if: github.event_name != 'pull_request'
@@ -53,13 +47,7 @@ jobs:
           GIT_USER: git
         run: |
           cd docs
-          git config --global user.email "actions@gihub.com"
-          git config --global user.name "gh-actions"
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
+          git config --global user.email "nafis.shah@gihub.com"
+          git config --global user.name "ShahNafis"
           npm ci
-          else
-          npm i
-          fi
           npx docusaurus deploy
