@@ -1,6 +1,6 @@
 module.exports = {
   title: 'My Site',
-  tagline: 'HELLO I AM TAGLINE',
+  tagline: 'wowe',
   favicon: 'img/favicon.ico',
 
   url: 'https://github.com/ShahNafis/mern-test/' , // Your website URL
